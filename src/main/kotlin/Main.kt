@@ -145,5 +145,96 @@ fun main() {
     courseUnits[0] = "Digital Electronics"
     println(courseUnits)
 
+    // Write your code below 🍎
+    var fruitTrees = mutableListOf("Apple","Plum","Pear","Cherry")
+    println("I am growing ${fruitTrees.size} different types of fruit in my garden.")
+    println()
+    // To print out the last item
+    println(fruitTrees[fruitTrees.size -1])
+
+    // List functions
+    val planets = mutableListOf("Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto")
+
+    // Write your code below 🪐
+    println(planets.remove("Pluto"))
+    println(planets)
+    println(planets.add("Earth"))
+    println(planets)
+    println(planets.random())
+
+    /* With immutable sets, we don’t have much control over the contents they store,
+    but with mutable sets, we are able to add, remove, or replace as many elements as we’d like.
+     */
+
+    // Using setOf an immutable set
+    val obsoleteTech = setOf("Rolodex","Phonograph","Videocassette recorder","Video projector","Rolodex")
+    println(obsoleteTech)
+    println()
+    println("${obsoleteTech::class.simpleName}")
+
+    // Accessing setOf using elementAt()
+
+    val islandsOfHawaii = setOf("Maui","Lanai","Oahu","Kauai")
+    println(islandsOfHawaii.elementAt(2))
+    println(islandsOfHawaii.elementAtOrNull(6))
+
+    // Adding and Removing in mutable setOf using addAll and clear
+
+    var uniqueParticipants = mutableSetOf<String>()
+    var participants = listOf("elePHPant", "Gopher", "Lenny", "Moby Dock", "Codey", "Gopher")
+
+    // Write your code below 🎤
+    uniqueParticipants.addAll(participants)
+    println(uniqueParticipants)
+    println("The talent show has ${uniqueParticipants.size} unique participants.")
+    uniqueParticipants.clear()
+    println(uniqueParticipants)
+
+    // Additional set functions
+
+    val testGrades = mutableSetOf(65,50,72,80,53,84)
+    println(testGrades.first())
+    println(testGrades)
+
+    val sum = testGrades.sum()
+    println(sum)
+    val numStudents = testGrades.size
+    println(numStudents)
+    val average = sum / numStudents
+    println(average)
+
+    if (average < 65) {
+        println("Failed")
+    }
+    else
+    {
+        println("Passed")
+    }
+
+    when{
+        (average < 65) -> { println("Failed")}
+        else ->{
+            println("Passed")
+        }
+    }
+
+    // Immutable maps
+    val codeysMap = mapOf("valley" to "scorpions","creek" to "snakes","forest" to "bears" )
+    println(codeysMap)
+
+    // Retrieving Keys and Values
+    var uniqueTransport = mapOf("India" to "Tuktuk", "Egypt" to "Felucca", "Peru" to "Totora Boat", "Hong Kong" to "Junk Boat")
+
+    // Write your code below 🚜
+    println("A unique mode of transportation that exists in Peru is ${uniqueTransport["Peru"]}.")
+    // A unique mode of transportation that exists in Peru is Totora Boat.
+    println(uniqueTransport.keys)
+    println(uniqueTransport.values)
+
+    // Handling mutable mapOf
+    val tvShows = mutableMapOf("The Big Bang Theory" to 278, "Modern Family" to 250,"Bewitched" to 254, "That '70s Show " to 200)
+    tvShows["The Big Bang Theory"] = 279
+    println(tvShows)
+
 }
 
