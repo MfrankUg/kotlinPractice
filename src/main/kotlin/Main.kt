@@ -235,6 +235,21 @@ fun main() {
     val tvShows = mutableMapOf("The Big Bang Theory" to 278, "Modern Family" to 250,"Bewitched" to 254, "That '70s Show " to 200)
     tvShows["The Big Bang Theory"] = 279
     println(tvShows)
+    val mySchedule = listOf("Eat Breakfast", "Clean Up", "Work", "Eat Lunch",  "Clean Up", "Work", "Eat Dinner", "Clean Up")
+
+    val myTasks = setOf("Eat Breakfast", "Clean Up", "Work", "Eat Lunch",  "Clean Up", "Work", "Eat Dinner", "Clean Up")
+
+    println("-- mySchedule Output --")
+    // Write your code below
+    for(task in mySchedule) {
+        println(task)
+    }
+
+    println("\n-- myTasks Output --")
+    // Write your code below
+    for ((taskIndex, task) in myTasks.withIndex()) {
+        println("$taskIndex : $task")
+    }
 
 }
 
