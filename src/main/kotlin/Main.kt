@@ -2,6 +2,8 @@ import java.lang.Math.*
 import kotlin.math.abs
 import kotlin.math.floor
 
+
+
 // Practice of Kotlin Fundamentals
 fun main() {
     // Write your code below ☀️
@@ -251,5 +253,24 @@ fun main() {
         println("$taskIndex : $task")
     }
 
+    // Iterations in for
+
+    val costs = mapOf<String,Int>("Shoe" to 42, "Shirt" to 48, "Pants" to 32)
+    for ((wear,size) in costs){
+        println("I wear $wear size $size")
+    }
+
+    // More on iterations using key and value
+    println()
+    val classNum = mapOf<String,Int>("JERRY" to 5, "FRED" to 3, "JAMES" to 1, "EUNICE" to 2, "PRINCESS" to 4)
+    println("HERE ARE THE KEYS")
+    for (stdNum in classNum.keys){
+    println(stdNum)
+    }
+    println()
+    println("HERE ARE THE VALUES")
+    for (stdNum in classNum.values){
+        println(stdNum)
+    }
 }
 
